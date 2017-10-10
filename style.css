@@ -18,7 +18,7 @@ h1 {
   /*color: #7fFFd4;*/
   color: #4dffc3;
   /*color: #87CEFA;*/
-   /*text-shadow: -8px 1px 5px #992900;*/
+   /*text-shadow: -5px 1px  white;*/
 }
 
 h3 {
@@ -26,8 +26,7 @@ h3 {
   font-size:50px;
   font-weight:300;
   color:#ffffff;
-  -webkit-animation: 3s linear 1s slidein;
-  animation: 3s linear 1s slidein;
+
 }
 
 .nav-div {
@@ -62,15 +61,15 @@ h3 {
 }
 
 .nav-div:hover {
-  border:2px solid #4dffc3;
-  border-radius:20px;
+  /*border:2px solid #4dffc3;*/
+  border-radius:10px;
   background-color: #4dffc3;
 
 }
 
 p {
   color:white;
-  font-size:28px;
+  font-size:22px;
 }
 
 .p-div {
@@ -107,20 +106,23 @@ a:visited {
 
 .letters {
   -webkit-animation-name:fade_in;
-  -webkit-animation-duration: 2s;
+  -webkit-animation-duration: 4s;
+
 }
 
 img {
   -webkit-animation-name:fade_in;
   -webkit-animation-duration: 4s;
+  /*box-shadow: -5px 5px #4dffc3;*/
 }
 
 @keyframes div_enter {
-    0% { left:-1500px; top:0px;}
+    0% { left:-1500px; top:0px; }
     100% { left:0px; top:0px;}
 }
 
 @keyframes fade_in {
   0% {opacity:0};
-  100%{opacity:.5}
+  80% {opacity:1};
+  100%{opacity:1}
 }

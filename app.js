@@ -5,19 +5,29 @@ angular
 ])
 .config([
   '$stateProvider',
+  '$urlRouterProvider',
+  '$locationProvider',
   Router
 ])
 
 
-function Router($stateProvider) {
+function Router($stateProvider, $urlRouterProvider, $locationProvider) {
+
+  // $urlRouterProvider.otherwise('About')
+  // $locationProvider.html5Mode({
+  //   enabled: true,
+  //   requireBase: false
+  // });
+  $locationProvider.html5Mode(true)
+
   $stateProvider
   // .state('Home', {
   //   url: '/',
   //   templateUrl: 'index.html'
   // })
   .state('About', {
-    url: '/',
-    templateUrl: './views/about.html'
+    url: '/about',
+    templateUrl: 'views/about.html'
   })
   .state('Projects', {
     url: '/projects',
@@ -31,7 +41,6 @@ function Router($stateProvider) {
     url: '/contact',
     templateUrl: 'views/contact.html'
   })
+  $urlRouterProvider.otherwise('/about')
+  $locationProvider.html5Mode(true)
 }
-
-$urlRouterProvider.otherwise('/')
-$locationProvider.html5Mode(true)
