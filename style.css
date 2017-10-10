@@ -46,18 +46,27 @@ h3 {
 
 }
 
+.inner-div {
+  display:flex;
+  flex-direction:row;
+}
+
 .content-div {
-  text-align:center;
+  text-align:left;
   width:70%;
   /*height:300px;*/
-  border:2px solid #ffffff;
+  /*border-left: 0px;*/
+  /*border-top:2px solid #ffffff;*/
+  border-bottom:2px solid #ffffff;
   border-radius:5px;
+  margin-top:20px;
 }
 
 .content-heads {
   font-family: 'Titillium Web', sans-serif;
   color: #4dffc3;
   font-size:100px;
+  margin-left:10px;
 }
 
 .nav-div:hover {
@@ -73,8 +82,10 @@ p {
 }
 
 .p-div {
-  width:70%;
-  margin-left:130px;
+  width:85%;
+  margin-left:60px;
+  border-left: 4px solid white;
+  padding-left:15px;
 }
 
 li {
