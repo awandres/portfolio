@@ -18,7 +18,7 @@ function Router($stateProvider, $urlRouterProvider, $locationProvider) {
   //   enabled: true,
   //   requireBase: false
   // });
-  $locationProvider.html5Mode(true)
+  // $locationProvider.html5Mode(true)
 
   $stateProvider
   // .state('Home', {
@@ -26,7 +26,7 @@ function Router($stateProvider, $urlRouterProvider, $locationProvider) {
   //   templateUrl: 'index.html'
   // })
   .state('About', {
-    url: '/about',
+    url: '/',
     templateUrl: 'views/about.html'
   })
   .state('Projects', {
@@ -41,6 +41,6 @@ function Router($stateProvider, $urlRouterProvider, $locationProvider) {
     url: '/contact',
     templateUrl: 'views/contact.html'
   })
-  $urlRouterProvider.otherwise('/about')
-  $locationProvider.html5Mode(true)
+  $urlRouterProvider.otherwise('/')
+  // $locationProvider.html5Mode(true)
 }
