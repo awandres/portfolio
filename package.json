@@ -19,6 +19,7 @@
   "homepage": "https://github.com/awandres/portfolio2#readme",
   "dependencies": {
     "angular-ui-router": "^0.4.3",
+    "hover.css": "^2.2.1",
     "ng-resource": "^1.3.2"
   }
 }
