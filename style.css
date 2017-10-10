@@ -234,6 +234,7 @@ a:visited {
 
 .hvr-fade {
   display: inline-block;
+  border-radius:8px;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
