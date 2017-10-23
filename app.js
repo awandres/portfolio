@@ -41,6 +41,6 @@ function Router($stateProvider, $urlRouterProvider, $locationProvider) {
     url: '/contact',
     templateUrl: 'views/contact.html'
   })
-  $urlRouterProvider.otherwise('/#/')
+  $urlRouterProvider.otherwise('/')
   // $locationProvider.html5Mode(true)
 }
