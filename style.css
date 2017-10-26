@@ -127,6 +127,10 @@ a:visited {
   /*box-shadow: -5px 5px #4dffc3;*/
 }
 
+.shadow-img:hover {
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2), 0 15px 25px 0 rgba(0, 0, 0, 0.19);
+}
+
 @keyframes div_enter {
     0% { left:-1500px; top:0px; }
     100% { left:0px; top:0px;}
@@ -137,6 +141,7 @@ a:visited {
   80% {opacity:1};
   100%{opacity:1}
 }
+
 
 @-webkit-keyframes hvr-bob {
   0% {
