@@ -11,6 +11,8 @@ nav {
   color: #ffffff;
 }
 
+nav a { color:#fff; }
+
 h1 {
   font-family: 'Titillium Web', sans-serif;
   /*font-weight:800;*/
@@ -105,8 +107,8 @@ a {
 
 
 
-a:visited {
-  color: #ffffff;
+a:visited, a:active, a:focus {
+  color: #ffffff!important;
 }
 
 .ani-div {
