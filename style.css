@@ -149,6 +149,44 @@ a:visited, a:active, a:focus {
   box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2), 0 15px 25px 0 rgba(0, 0, 0, 0.19);
 }
 
+@media (max-width:1400px) {
+  h1 { font-size:108px;}
+}
+
+@media (max-width:1265px) {
+  h1 { font-size:84px;}
+  .intro-content { width:80%; margin:0 auto; }
+
+}
+
+@media (max-width:1265px) {
+  h1 { font-size:72px;}
+
+}
+
+@media (max-width:990px) {
+  /* .profile-img { height:300px; width:250px; display:block; clear:left; border-radius:250px; margin: 0 auto;} */
+  /* .intro-title { text-align:center; margin-top:0px; margin-left:0px; } */
+  h1 { display:block; }
+
+}
+
+@media (max-width:767px) {
+  nav a { color:#fff; font-size:45px!important; margin: 20px 0px!important; }
+  .nav-div { margin:20px!important; }
+  .navHr { margin:30px!important; }
+  .projects-text { font-size: 32px; }
+  .shadow-img { width:80%!important; height:auto!important; margin:20px auto!important;}
+  .inner-div {flex-direction: column;}
+  .content-heads { margin-top:50px; }
+}
+
+@media (max-width:500px) {
+  nav a { color:#fff; font-size:30px!important; }
+  .navHr { margin-top:30px; }
+}
+
+
 @keyframes div_enter {
     0% { left:-1500px; top:0px; }
     100% { left:0px; top:0px;}
@@ -272,41 +310,4 @@ a:visited, a:active, a:focus {
   background-color: #4dffc3;
   border-radius:8px;
   color: white;
-}
-
-@media (max-width:1400px) {
-  h1 { font-size:108px;}
-}
-
-@media (max-width:1265px) {
-  h1 { font-size:84px;}
-  .intro-content { width:80%; margin:0 auto; }
-
-}
-
-@media (max-width:1265px) {
-  h1 { font-size:72px;}
-
-}
-
-@media (max-width:990px) {
-  /* .profile-img { height:300px; width:250px; display:block; clear:left; border-radius:250px; margin: 0 auto;} */
-  /* .intro-title { text-align:center; margin-top:0px; margin-left:0px; } */
-  h1 { display:block; }
-
-}
-
-@media (max-width:767px) {
-  nav a { color:#fff; font-size:45px!important; margin: 20px 0px!important; }
-  .nav-div { margin:20px!important; }
-  .navHr { margin:30px!important; }
-  .projects-text { font-size: 32px; }
-  .shadow-img { width:80%; height:auto; margin:20px auto;}
-  .inner-div {flex-direction: column;}
-  .content-heads { margin-top:50px; }
-}
-
-@media (max-width:500px) {
-  nav a { color:#fff; font-size:30px!important; }
-  .navHr { margin-top:30px; }
 }
