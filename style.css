@@ -114,15 +114,15 @@ a {
 }
 
 /* PROJECTS */
-.centennial { max-width:500px; height:300px; margin-top:100px; margin-left:65px; }
-.vetted, .marquee, .randsom, .alexcoomer { max-width:500px; height:300px; margin-top:100px; margin-left:20px;}
-.recipes { max-width:500px; height:300px; margin-top:150px; margin-left:20px; }
-.shadow-img-2 { max-width:500px; height:300px; margin-top:150px; margin-left:20px; }
-.shadow-img-3 { max-width:500px; height:300px; margin-top:70px; margin-left:20px; }
-.luna { max-width:500px; height:300px; margin-top:100px; }
-.mollys, .bamboo, .debellis { max-width:500px; height:300px; margin-top:100px; }
-.inrch { max-width:500px; height:300px; margin-top:100px; margin-left:20px; }
-.simon { max-width:500px; height:300px; margin-top:70px; margin-left:20px; }
+.centennial { width:500px; height:300px; margin-top:100px; margin-left:65px; }
+.vetted, .marquee, .randsom, .alexcoomer { width:500px; height:300px; margin-top:100px; margin-left:20px;}
+.recipes { width:500px; height:300px; margin-top:150px; margin-left:20px; }
+.shadow-img-2 { width:500px; height:300px; margin-top:150px; margin-left:20px; }
+.shadow-img-3 { width:500px; height:300px; margin-top:70px; margin-left:20px; }
+.luna { width:500px; height:300px; margin-top:100px; }
+.mollys, .bamboo, .debellis { width:500px; height:300px; margin-top:100px; }
+.inrch { width:500px; height:300px; margin-top:100px; margin-left:20px; }
+.simon { width:500px; height:300px; margin-top:70px; margin-left:20px; }
 a:visited, a:active, a:focus {
   color: #ffffff!important;
 }
