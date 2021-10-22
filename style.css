@@ -175,26 +175,28 @@ a:visited, a:active, a:focus {
   h1, .mollys-header, .content-heads { display:block; font-size:4em!important; }
   .mollys-header { line-height: inherit; }
   .projects-text { font-size: 1.5em; }
-
-
-
 }
 
+
+
 @media (max-width:767px) {
-  nav a { color:#fff; font-size:25px!important; margin: 20px 0px!important; }
+  nav a { color:#fff; font-size:20px!important; margin: 10px 0px!important; }
   .nav-div { margin:20px!important; }
   .navHr { margin:30px!important; }
   .content-heads { margin-top:50px; }
   .mollys-header { font-size:2em!important}
+  h1 { font-size:2em!important;}
+  .intro-title {margin:0;}
+
 }
 
 @media (max-width:500px) {
-  nav a { color:#fff; font-size:15px!important; }
+  nav a { color:#fff; font-size:12px!important; }
   .navHr { margin-top:30px; }
-  h1 { font-size:2em; }
   .content-heads { font-size:3em; margin:20px 0px; }
-  .profile-img { width:150px; height:180px; }
+  .profile-img { width:150px; height:180px; margin: 20px auto; display:block;}
   h3 { font-size:1.8em; }
+  h1 { display:block!important; margin:20px auto!important;}
 }
 
 
