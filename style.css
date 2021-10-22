@@ -31,7 +31,7 @@ h3 {
   color:#ffffff;
 
 }
-
+.visible-xs { display:none; }
 .navHr { width:80%; }
 
 .intro-title { text-align:center; margin-top:-20px; margin-left:400px; }
@@ -189,12 +189,14 @@ a:visited, a:active, a:focus {
   .navHr { margin:30px auto!important; }
   .content-heads { margin-top:50px; }
   .mollys-header { font-size:2em!important}
-  h1 { font-size:2em!important;}
+  h1 { font-size:2.5em!important;}
   .intro-title {margin:0;}
 
 }
 
 @media (max-width:500px) {
+  .hidden-xs { display:none; }
+  .visible-xs { display:block;}
   nav a { color:#fff; font-size:12px!important; }
   .navHr { margin-top:30px; }
   .content-heads { font-size:3em; margin:20px 0px; }
