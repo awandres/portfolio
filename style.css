@@ -173,6 +173,7 @@ a:visited, a:active, a:focus {
 @media (max-width:990px) {
 
   h1, .mollys-header, .content-heads { display:block; font-size:4em!important; }
+  .mollys-header { line-height: inherit; }
   .projects-text { font-size: 1.5em; }
 
 
@@ -184,12 +185,14 @@ a:visited, a:active, a:focus {
   .nav-div { margin:20px!important; }
   .navHr { margin:30px!important; }
   .content-heads { margin-top:50px; }
+  .mollys-header { font-size:2em!important}
 }
 
 @media (max-width:500px) {
   nav a { color:#fff; font-size:15px!important; }
   .navHr { margin-top:30px; }
   h1 { font-size:2em; }
+  .content-heads { font-size:3em; margin:20px 0px; }
   .profile-img { width:150px; height:180px; }
   h3 { font-size:1.8em; }
 }
