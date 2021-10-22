@@ -142,7 +142,6 @@ a:visited, a:active, a:focus {
 .fade-img {
   -webkit-animation-name:fade_in;
   -webkit-animation-duration: 4s;
-  /*box-shadow: -5px 5px #4dffc3;*/
 }
 
 .shadow-img:hover {
@@ -165,8 +164,7 @@ a:visited, a:active, a:focus {
 }
 
 @media (max-width:990px) {
-  /* .profile-img { height:300px; width:250px; display:block; clear:left; border-radius:250px; margin: 0 auto;} */
-  /* .intro-title { text-align:center; margin-top:0px; margin-left:0px; } */
+
   h1 { display:block; }
 
 }
