@@ -42,6 +42,8 @@ h3 {
 
 }
 
+.eighty-div { max-width: 80%;}
+
 .profile-img { height:300px; width:250px; clear:left; border-radius:250px;margin-left:70px; margin-right:-80px; margin-top:40px; }
 
 .intro-content { width:70%; margin-left:200px; }
@@ -78,6 +80,8 @@ h3 {
   font-size:100px;
   margin-left:10px;
 }
+
+.mollys-header { font-weight:lighter; margin-top:5px; margin-bottom:-10px; max-width:600px; font-size:6rem; line-height:90px; }
 
 .nav-div:hover {
   /*border:2px solid #4dffc3;*/
@@ -160,27 +164,30 @@ a:visited, a:active, a:focus {
 
 @media (max-width:1265px) {
   h1 { font-size:72px;}
-
+  .inner-div {flex-direction: column;}
+  .eighty-div { max-width:100%; }
+  .p-div {margin-left:0px; }
+  .shadow-img { width:auto; height:auto!important; margin:20px auto!important;}
 }
 
 @media (max-width:990px) {
 
-  h1 { display:block; }
+  h1, .mollys-header { display:block; font-size:4em!important; }
+  .projects-text { font-size: 1.5em; }
+
+
 
 }
 
 @media (max-width:767px) {
-  nav a { color:#fff; font-size:45px!important; margin: 20px 0px!important; }
+  nav a { color:#fff; font-size:25px!important; margin: 20px 0px!important; }
   .nav-div { margin:20px!important; }
   .navHr { margin:30px!important; }
-  .projects-text { font-size: 32px; }
-  .shadow-img { width:80%!important; height:auto!important; margin:20px auto!important;}
-  .inner-div {flex-direction: column;}
   .content-heads { margin-top:50px; }
 }
 
 @media (max-width:500px) {
-  nav a { color:#fff; font-size:30px!important; }
+  nav a { color:#fff; font-size:15px!important; }
   .navHr { margin-top:30px; }
 }
 
