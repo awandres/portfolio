@@ -186,7 +186,7 @@ a:visited, a:active, a:focus {
 @media (max-width:767px) {
   nav a { color:#fff; font-size:20px!important; margin: 10px 0px!important; padding:4px; }
   .nav-div { margin:20px!important; }
-  .navHr { margin:30px!important; }
+  .navHr { margin:30px auto!important; }
   .content-heads { margin-top:50px; }
   .mollys-header { font-size:2em!important}
   h1 { font-size:2em!important;}
