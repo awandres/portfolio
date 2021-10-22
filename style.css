@@ -327,5 +327,5 @@ a:visited, a:active, a:focus {
 .hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
   background-color: #4dffc3;
   border-radius:8px;
-  color: white;
+  color: #000;
 }
