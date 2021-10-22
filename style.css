@@ -165,6 +165,10 @@ a:visited, a:active, a:focus {
 
 @media (max-width:1265px) {
   h1 { font-size:72px;}
+
+}
+
+@media (max-width:1000px) {
   .inner-div {flex-direction: column;}
   .eighty-div { max-width:100%; }
   .p-div {margin-left:0px; }
