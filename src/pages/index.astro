@@ -111,7 +111,10 @@ const allProjects: Project[] = [
     gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
     badge: "Live",
     link: `${base}/projects`,
-    images: [`${base}/images/the-milestones-website-image.png`, `${base}/images/mstones.png`],
+    images: [
+      `${base}/images/the-milestones-website-image.png`,
+      `${base}/images/mstones.png`,
+    ],
     live: "https://themilestones.band",
   },
   {
@@ -235,7 +238,11 @@ const getStackTechs = (stack: ProjectStack) => {
   <section class="hero">
     <div class="hero-content">
       <div class="hero-image-container">
-        <img src={`${base}/images/headshot.jpg`} alt="Alex Wandres" class="hero-image" />
+        <img
+          src={`${base}/images/headshot.jpg`}
+          alt="Alex Wandres"
+          class="hero-image"
+        />
       </div>
 
       <div class="hero-text">
@@ -539,7 +546,8 @@ const getStackTechs = (stack: ProjectStack) => {
     </div>
 
     <div class="section-cta">
-      <a href={`${base}/projects`} class="btn btn-outline">View Full Project Details →</a
+      <a href={`${base}/projects`} class="btn btn-outline"
+        >View Full Project Details →</a
       >
     </div>
   </section>

@@ -725,3 +725,13 @@ const categories = [
     }
   }
 </style>
+
+<script>
+  // Make back-to-top links jump instantly (no smooth scroll)
+  document.querySelectorAll('.back-to-top').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    });
+  });
+</script>
