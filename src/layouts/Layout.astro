@@ -9,6 +9,7 @@ const {
   description = "Full Stack Developer specializing in modern web applications, AI-assisted development, and creative digital solutions.",
 } = Astro.props;
 
+const base = import.meta.env.BASE_URL;
 const currentPath = Astro.url.pathname;
 ---
 
@@ -18,7 +19,7 @@ const currentPath = Astro.url.pathname;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,36 +32,36 @@ const currentPath = Astro.url.pathname;
     <nav class="nav">
       <div class="nav-inner">
         <a
-          href="/"
-          class:list={["nav-link", "hvr-fade", { active: currentPath === "/" }]}
+          href={`${base}/`}
+          class:list={["nav-link", "hvr-fade", { active: currentPath === `${base}/` || currentPath === "/" }]}
           >About Me</a
         >
         <a
-          href="/projects"
+          href={`${base}/projects`}
           class:list={[
             "nav-link",
             "hvr-fade",
             {
               active:
-                currentPath === "/projects" || currentPath === "/projects/",
+                currentPath === `${base}/projects` || currentPath === `${base}/projects/` || currentPath === "/projects" || currentPath === "/projects/",
             },
           ]}>Projects</a
         >
         <a
-          href="/resume"
+          href={`${base}/resume`}
           class:list={[
             "nav-link",
             "hvr-fade",
-            { active: currentPath === "/resume" || currentPath === "/resume/" },
+            { active: currentPath === `${base}/resume` || currentPath === `${base}/resume/` || currentPath === "/resume" || currentPath === "/resume/" },
           ]}>Resume</a
         >
         <a
-          href="/contact"
+          href={`${base}/contact`}
           class:list={[
             "nav-link",
             "hvr-fade",
             {
-              active: currentPath === "/contact" || currentPath === "/contact/",
+              active: currentPath === `${base}/contact` || currentPath === `${base}/contact/` || currentPath === "/contact" || currentPath === "/contact/",
             },
           ]}>Contact</a
         >

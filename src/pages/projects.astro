@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
+const base = import.meta.env.BASE_URL;
+
 // Type for project stack
 type ProjectStack = Record<string, string[]>;
 
@@ -34,7 +36,7 @@ const projects: Project[] = [
     badge: "Current Role - 2025",
     gradient: "linear-gradient(135deg, #1a365d 0%, #2c5282 100%)",
     live: "https://www.aframesolutions.com/",
-    image: "/images/arc-procure-demo-example.png",
+    image: `${base}/images/arc-procure-demo-example.png`,
   },
   {
     id: "soundsgood",
@@ -51,7 +53,7 @@ const projects: Project[] = [
     badge: "In Development - 2024",
     gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
     live: "https://www.soundsgoodapps.com/login",
-    image: "/images/soundsgood-apps-demo.png",
+    image: `${base}/images/soundsgood-apps-demo.png`,
   },
   {
     id: "gearcatalog",
@@ -69,7 +71,7 @@ const projects: Project[] = [
     gradient: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
     github: "https://github.com/awandres/gear-catalogue",
     live: "https://gear-catalogue.vercel.app/gear",
-    image: "/images/gear-catalogue-demo.png",
+    image: `${base}/images/gear-catalogue-demo.png`,
   },
   // Government Software
   {
@@ -87,7 +89,7 @@ const projects: Project[] = [
     category: "government",
     badge: "DOE - 2024-2025",
     gradient: "linear-gradient(135deg, #2d3748 0%, #4a5568 100%)",
-    image: "/images/original_doe_logo.png",
+    image: `${base}/images/original_doe_logo.png`,
   },
   // Professional & Freelance
   {
@@ -102,7 +104,7 @@ const projects: Project[] = [
     category: "professional",
     badge: "Full-Time Role",
     gradient: "linear-gradient(135deg, #00c6ff 0%, #0072ff 100%)",
-    image: "/images/ihire-website-image.png",
+    image: `${base}/images/ihire-website-image.png`,
     live: "https://www.ihire.com",
   },
   {
@@ -117,7 +119,7 @@ const projects: Project[] = [
     category: "professional",
     badge: "Client Project",
     gradient: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)",
-    image: "/images/alexcoomerlaw.png",
+    image: `${base}/images/alexcoomerlaw.png`,
     github: "https://github.com/awandres/alexcoomerlaw",
     live: "https://awandres.github.io/alexcoomerlaw/#/",
   },
@@ -134,7 +136,7 @@ const projects: Project[] = [
     category: "professional",
     badge: "Live Site",
     gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-    image: "/images/the-milestones-website-image.png",
+    image: `${base}/images/the-milestones-website-image.png`,
     live: "https://themilestones.band",
   },
   {
@@ -148,7 +150,7 @@ const projects: Project[] = [
     category: "professional",
     badge: "Client Project",
     gradient: "linear-gradient(135deg, #f7971e 0%, #ffd200 100%)",
-    image: "/images/vetted.png",
+    image: `${base}/images/vetted.png`,
     github: "https://github.com/awandres/vetted-trainers",
   },
   {
@@ -164,7 +166,7 @@ const projects: Project[] = [
     category: "professional",
     badge: "Freelance Contract",
     gradient: "linear-gradient(135deg, #8E2DE2 0%, #4A00E0 100%)",
-    image: "/images/centennial.png",
+    image: `${base}/images/centennial.png`,
     github: "https://github.com/awandres/centennial",
   },
   // Earlier Work
@@ -180,7 +182,7 @@ const projects: Project[] = [
     category: "earlier",
     badge: "Client Site",
     gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
-    image: "/images/luna-yoga.png",
+    image: `${base}/images/luna-yoga.png`,
   },
   {
     id: "marquee",
@@ -195,7 +197,7 @@ const projects: Project[] = [
     category: "earlier",
     badge: "Bootcamp Project",
     gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
-    image: "/images/marquee.png",
+    image: `${base}/images/marquee.png`,
     github: "https://github.com/awandres/marquee",
   },
   {
@@ -209,7 +211,7 @@ const projects: Project[] = [
     category: "earlier",
     badge: "Client Site",
     gradient: "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)",
-    image: "/images/bigbamboo_ss.png",
+    image: `${base}/images/bigbamboo_ss.png`,
     live: "http://www.bigbamboouvita.com/",
   },
   {
@@ -223,7 +225,7 @@ const projects: Project[] = [
     category: "earlier",
     badge: "Agency Work",
     gradient: "linear-gradient(135deg, #ff6b6b 0%, #feca57 100%)",
-    image: "/images/debellis-ad.png",
+    image: `${base}/images/debellis-ad.png`,
   },
 ];
 

@@ -1,6 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
+// Base URL for GitHub Pages deployment
+const base = import.meta.env.BASE_URL;
+
 // Type for project stack
 type ProjectStack = Record<string, string[]>;
 
@@ -33,9 +36,9 @@ const allProjects: Project[] = [
     },
     gradient: "linear-gradient(135deg, #1a365d 0%, #2c5282 100%)",
     badge: "Current",
-    link: "/projects",
+    link: `${base}/projects`,
     live: "https://www.aframesolutions.com/",
-    image: "/images/arc-procure-demo-example.png",
+    image: `${base}/images/arc-procure-demo-example.png`,
   },
   {
     id: "soundsgood",
@@ -51,15 +54,15 @@ const allProjects: Project[] = [
     },
     gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
     badge: "AI-Built",
-    link: "/projects",
+    link: `${base}/projects`,
     live: "https://www.soundsgoodapps.com/login",
     images: [
-      "/images/soundsgood-apps-demo.png",
-      "/images/soundsgood-project-status.png",
-      "/images/soundsgood-admin.png",
-      "/images/soundsgood-store.png",
-      "/images/soundsgood-pos.png",
-      "/images/soundsgood-musicians.png",
+      `${base}/images/soundsgood-apps-demo.png`,
+      `${base}/images/soundsgood-project-status.png`,
+      `${base}/images/soundsgood-admin.png`,
+      `${base}/images/soundsgood-store.png`,
+      `${base}/images/soundsgood-pos.png`,
+      `${base}/images/soundsgood-musicians.png`,
     ],
   },
   {
@@ -75,9 +78,9 @@ const allProjects: Project[] = [
     },
     gradient: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
     badge: "AI-Built",
-    link: "/projects",
+    link: `${base}/projects`,
     live: "https://gear-catalogue.vercel.app/gear",
-    image: "/images/gear-catalogue-demo.png",
+    image: `${base}/images/gear-catalogue-demo.png`,
   },
   {
     id: "fedoil",
@@ -92,8 +95,8 @@ const allProjects: Project[] = [
     },
     gradient: "linear-gradient(135deg, #2d3748 0%, #4a5568 100%)",
     badge: "DOE",
-    link: "/projects",
-    image: "/images/original_doe_logo.png",
+    link: `${base}/projects`,
+    image: `${base}/images/original_doe_logo.png`,
     imageContain: true,
   },
   {
@@ -107,8 +110,8 @@ const allProjects: Project[] = [
     },
     gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
     badge: "Live",
-    link: "/projects",
-    images: ["/images/the-milestones-website-image.png", "/images/mstones.png"],
+    link: `${base}/projects`,
+    images: [`${base}/images/the-milestones-website-image.png`, `${base}/images/mstones.png`],
     live: "https://themilestones.band",
   },
   {
@@ -123,10 +126,10 @@ const allProjects: Project[] = [
     },
     gradient: "linear-gradient(135deg, #00c6ff 0%, #0072ff 100%)",
     badge: "Enterprise",
-    link: "/projects",
+    link: `${base}/projects`,
     images: [
-      "/images/ihire-website-image.png",
-      "/images/iHire-Example-Site.png",
+      `${base}/images/ihire-website-image.png`,
+      `${base}/images/iHire-Example-Site.png`,
     ],
     live: "https://www.ihire.com",
   },
@@ -140,8 +143,8 @@ const allProjects: Project[] = [
     },
     gradient: "linear-gradient(135deg, #f7971e 0%, #ffd200 100%)",
     badge: "Freelance",
-    link: "/projects",
-    image: "/images/vetted.png",
+    link: `${base}/projects`,
+    image: `${base}/images/vetted.png`,
     github: "https://github.com/awandres/vetted-trainers",
   },
   {
@@ -156,8 +159,8 @@ const allProjects: Project[] = [
     },
     gradient: "linear-gradient(135deg, #8E2DE2 0%, #4A00E0 100%)",
     badge: "Freelance",
-    link: "/projects",
-    image: "/images/centennial.png",
+    link: `${base}/projects`,
+    image: `${base}/images/centennial.png`,
     github: "https://github.com/awandres/centennial",
   },
   {
@@ -171,8 +174,8 @@ const allProjects: Project[] = [
     },
     gradient: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)",
     badge: "Freelance",
-    link: "/projects",
-    image: "/images/alexcoomerlaw.png",
+    link: `${base}/projects`,
+    image: `${base}/images/alexcoomerlaw.png`,
     github: "https://github.com/awandres/alexcoomerlaw",
     live: "https://awandres.github.io/alexcoomerlaw/#/",
   },
@@ -186,8 +189,8 @@ const allProjects: Project[] = [
     },
     gradient: "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)",
     badge: "Client Site",
-    link: "/projects",
-    image: "/images/bigbamboo_ss.png",
+    link: `${base}/projects`,
+    image: `${base}/images/bigbamboo_ss.png`,
     live: "http://www.bigbamboouvita.com/",
   },
   {
@@ -199,8 +202,8 @@ const allProjects: Project[] = [
     },
     gradient: "linear-gradient(135deg, #ff6b6b 0%, #feca57 100%)",
     badge: "Agency",
-    link: "/projects",
-    image: "/images/debellis-ad.png",
+    link: `${base}/projects`,
+    image: `${base}/images/debellis-ad.png`,
   },
   {
     id: "tradegrounds",
@@ -212,7 +215,7 @@ const allProjects: Project[] = [
     },
     gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
     badge: "Startup",
-    link: "/projects",
+    link: `${base}/projects`,
     github: "https://gitlab.com/awandres",
   },
 ];
@@ -232,7 +235,7 @@ const getStackTechs = (stack: ProjectStack) => {
   <section class="hero">
     <div class="hero-content">
       <div class="hero-image-container">
-        <img src="/images/headshot.jpg" alt="Alex Wandres" class="hero-image" />
+        <img src={`${base}/images/headshot.jpg`} alt="Alex Wandres" class="hero-image" />
       </div>
 
       <div class="hero-text">
@@ -264,8 +267,8 @@ const getStackTechs = (stack: ProjectStack) => {
         </div>
 
         <div class="hero-cta">
-          <a href="/projects" class="btn btn-primary">View My Work</a>
-          <a href="/contact" class="btn btn-secondary">Get in Touch</a>
+          <a href={`${base}/projects`} class="btn btn-primary">View My Work</a>
+          <a href={`${base}/contact`} class="btn btn-secondary">Get in Touch</a>
         </div>
       </div>
     </div>
@@ -536,7 +539,7 @@ const getStackTechs = (stack: ProjectStack) => {
     </div>
 
     <div class="section-cta">
-      <a href="/projects" class="btn btn-outline">View Full Project Details →</a
+      <a href={`${base}/projects`} class="btn btn-outline">View Full Project Details →</a
       >
     </div>
   </section>
