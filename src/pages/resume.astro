@@ -1,0 +1,602 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Resume | Alex Wandres"
+  description="Professional resume and skills overview for Alex Wandres, Full Stack Software Engineer."
+>
+  <div class="resume-page">
+    <header class="page-header">
+      <h1>Resume</h1>
+      <p>Full Stack Software Engineer with government clearance experience</p>
+      <a
+        href="/files/Alex_Wandres_Resume_11-4-25.pdf"
+        target="_blank"
+        class="download-btn"
+      >
+        <span>📄</span> Download PDF
+      </a>
+    </header>
+
+    <div class="resume-layout">
+      <!-- PDF Embed Column (Left - 30%) -->
+      <aside class="pdf-column">
+        <div class="pdf-sticky">
+          <h2>Full Resume</h2>
+          <div class="pdf-container">
+            <iframe
+              src="/files/Alex_Wandres_Resume_11-4-25.pdf#zoom=100&view=FitH"
+              title="Alex Wandres Resume"></iframe>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Content Column (Right - 70%) -->
+      <div class="content-column">
+        <!-- Skills Overview -->
+        <section class="resume-section">
+          <h2>Technical Skills</h2>
+
+          <div class="skills-columns">
+            <div class="skill-category">
+              <h3>Frontend</h3>
+              <div class="skill-list">
+                <span class="skill">React</span>
+                <span class="skill">Next.js</span>
+                <span class="skill">Angular</span>
+                <span class="skill">Vue.js</span>
+                <span class="skill">Blazor</span>
+                <span class="skill">jQuery</span>
+                <span class="skill">Flutter/Dart</span>
+                <span class="skill">HTML5</span>
+                <span class="skill">CSS3</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3>Backend</h3>
+              <div class="skill-list">
+                <span class="skill">C# / ASP.NET</span>
+                <span class="skill">Node.js / Express</span>
+                <span class="skill">SQL Server</span>
+                <span class="skill">PostgreSQL</span>
+                <span class="skill">Prisma</span>
+                <span class="skill">Drizzle ORM</span>
+                <span class="skill">tRPC</span>
+                <span class="skill">ElasticSearch</span>
+                <span class="skill">Cloud Firestore</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3>Cloud & Tools</h3>
+              <div class="skill-list">
+                <span class="skill">Azure Cloud</span>
+                <span class="skill">AWS</span>
+                <span class="skill">Vercel</span>
+                <span class="skill">Git / GitHub</span>
+                <span class="skill">PowerBI</span>
+                <span class="skill">Google Analytics / GA4</span>
+                <span class="skill">WordPress</span>
+              </div>
+            </div>
+
+            <div class="skill-category highlight">
+              <h3>🤖 AI-Assisted Development</h3>
+              <div class="skill-list">
+                <span class="skill featured">Claude Code</span>
+                <span class="skill featured">Cursor IDE</span>
+                <span class="skill">GitHub Copilot</span>
+                <span class="skill">Prompt Engineering</span>
+                <span class="skill">AI Pair Programming</span>
+              </div>
+              <p class="skill-note">
+                Building production applications with AI tools — delivered
+                dashboards in weeks that would traditionally take months with a
+                full team.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="resume-section">
+          <h2>Experience</h2>
+
+          <div class="experience-list">
+            <article class="experience-item featured">
+              <div class="exp-header">
+                <div>
+                  <h3>Full-Stack Software Engineer</h3>
+                  <p class="company">
+                    A-Frame Solutions — NIH (Contract, Remote)
+                  </p>
+                  <span class="clearance"
+                    >🔒 Public Trust Security Clearance</span
+                  >
+                </div>
+                <span class="date">Aug 2025 – Present</span>
+              </div>
+              <ul class="exp-details">
+                <li>
+                  AI-Assisted full stack programming using Claude Code to build
+                  Arc Procure — custom software streamlining government contract
+                  proposal/approval processes
+                </li>
+                <li>
+                  Created fully fleshed out multi-phase development roadmap to
+                  guide application build-out
+                </li>
+                <li>
+                  Developed custom admin dashboard for a team of 10 to track
+                  contract validation tasks, integrating existing Google Sheets
+                  data
+                </li>
+                <li>
+                  Built dashboard using AI development tools that would have
+                  taken a traditional team months to deliver
+                </li>
+                <li>
+                  Responsible for project management, coordinating developers
+                  using Linear tickets and agile methodology
+                </li>
+              </ul>
+            </article>
+
+            <article class="experience-item featured">
+              <div class="exp-header">
+                <div>
+                  <h3>Full-Stack Software Engineer</h3>
+                  <p class="company">
+                    CodePlus — Department of Energy (Remote)
+                  </p>
+                  <span class="clearance"
+                    >🔒 Public Trust Security Clearance</span
+                  >
+                </div>
+                <span class="date">Feb 2024 – Aug 2025</span>
+              </div>
+              <ul class="exp-details">
+                <li>
+                  Developed and refined software on government website for
+                  bidding on Federal oil reserves
+                </li>
+                <li>
+                  Modernized legacy site to modern web standards using Blazor
+                  and .NET
+                </li>
+                <li>
+                  Built system ranking bids and managing inventory with
+                  regulatory requirements
+                </li>
+                <li>
+                  Developed Angular dashboard with interactive widgets
+                  displaying oil inventory, pipeline flows, crude imports and
+                  deliveries
+                </li>
+                <li>
+                  Connected to NOAA API to monitor hurricane movements impacting
+                  oil sites
+                </li>
+                <li>
+                  Assisted in migrating site to Azure Cloud and ensured security
+                  compliance for penetration testing
+                </li>
+                <li>
+                  Implemented Login.Gov authentication using OAuth 2.0 with OIDC
+                  verification and JWT
+                </li>
+              </ul>
+            </article>
+
+            <article class="experience-item">
+              <div class="exp-header">
+                <div>
+                  <h3>Full-Stack Software Engineer</h3>
+                  <p class="company">iHire (Remote)</p>
+                </div>
+                <span class="date">Jan 2022 – Oct 2023</span>
+              </div>
+              <ul class="exp-details">
+                <li>
+                  Utilized Agile structure to deploy regular feature updates to
+                  proprietary hiring platform
+                </li>
+                <li>
+                  Developed features in C# and ASP.NET MVC — location targeting,
+                  Work Preferences (In-Person/Hybrid/Remote), multi-user team
+                  features
+                </li>
+                <li>
+                  Member of task force to completely overhaul branding/design
+                  across entire site over 6 months
+                </li>
+                <li>
+                  Built proprietary CRM software including self-serve billing,
+                  consolidated client data, admin notes and follow-up reminders
+                </li>
+                <li>
+                  Helped build SMS and email notification system from scratch;
+                  integrated Zoom, SendGrid, MailChimp APIs
+                </li>
+                <li>
+                  Worked with large SQL datasets: 2M+ posted jobs, 14M+ job
+                  seekers
+                </li>
+              </ul>
+            </article>
+
+            <article class="experience-item">
+              <div class="exp-header">
+                <div>
+                  <h3>Front End Web Developer</h3>
+                  <p class="company">DealerOn (Remote)</p>
+                </div>
+                <span class="date">Sep 2020 – Sep 2025</span>
+              </div>
+              <ul class="exp-details">
+                <li>
+                  Maintained large CMS for 1000+ car dealership websites
+                  optimized for SEO
+                </li>
+                <li>
+                  Created and updated reusable template pages tied to OEM
+                  databases
+                </li>
+                <li>
+                  Designed and developed new features and code snippets to
+                  streamline development
+                </li>
+              </ul>
+            </article>
+
+            <article class="experience-item">
+              <div class="exp-header">
+                <div>
+                  <h3>Flutter Mobile App Developer</h3>
+                  <p class="company">Tradegrounds (Contract, Remote)</p>
+                </div>
+                <span class="date">Dec 2020 – Jun 2021</span>
+              </div>
+              <ul class="exp-details">
+                <li>
+                  Member of startup team designing and developing e-commerce
+                  mobile app for local vendors
+                </li>
+                <li>
+                  Used Flutter and Dart for cross-platform Android and iOS
+                  development
+                </li>
+                <li>Setup and managed Firestore NoSQL database</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section class="resume-section">
+          <h2>Education</h2>
+
+          <div class="experience-list">
+            <article class="experience-item">
+              <div class="exp-header">
+                <div>
+                  <h3>Web Development Immersive Certificate</h3>
+                  <p class="company">General Assembly, Washington D.C.</p>
+                </div>
+                <span class="date">2017</span>
+              </div>
+            </article>
+
+            <article class="experience-item">
+              <div class="exp-header">
+                <div>
+                  <h3>Philosophy Coursework (GPA 3.48)</h3>
+                  <p class="company">University of Maryland, College Park</p>
+                </div>
+                <span class="date">2008 – 2012</span>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .resume-page {
+    width: 100%;
+    max-width: 100%;
+    padding: 2rem;
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-header h1 {
+    font-family: "Titillium Web", sans-serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    color: #4dffc3;
+  }
+
+  .page-header p {
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent);
+    color: #111111;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .download-btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(77, 255, 195, 0.3);
+    color: #111111;
+  }
+
+  .resume-layout {
+    display: flex;
+    gap: 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+
+  .pdf-column {
+    flex: 0 0 30%;
+    min-width: 350px;
+  }
+
+  .pdf-sticky {
+    position: sticky;
+    top: 2rem;
+  }
+
+  .pdf-sticky h2 {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: #4dffc3;
+  }
+
+  .content-column {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .resume-section {
+    margin-bottom: 3rem;
+  }
+
+  .resume-section h2 {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--accent);
+    color: #4dffc3;
+  }
+
+  .skills-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .skill-category {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+  }
+
+  .skill-category.highlight {
+    border-color: var(--accent);
+    background: linear-gradient(
+      135deg,
+      rgba(77, 255, 195, 0.05) 0%,
+      transparent 100%
+    );
+  }
+
+  .skill-category h3 {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+
+  .skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .skill {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-family: "Titillium Web", sans-serif;
+    transition: all 0.2s ease;
+  }
+
+  .skill.featured {
+    background: var(--accent-dim);
+    color: var(--accent);
+  }
+
+  .skill-note {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  .experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .experience-item {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: border-color 0.3s ease;
+  }
+
+  .experience-item:hover {
+    border-color: var(--accent);
+  }
+
+  .experience-item.featured {
+    border-left: 3px solid var(--accent);
+  }
+
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .exp-header h3 {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .company {
+    color: var(--accent);
+    font-size: 1.05rem;
+    font-family: "Titillium Web", sans-serif;
+  }
+
+  .clearance {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+  }
+
+  .date {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-family: "Titillium Web", sans-serif;
+    white-space: nowrap;
+  }
+
+  .exp-details {
+    list-style: none;
+    padding: 0;
+  }
+
+  .exp-details li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .exp-details li::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+  }
+
+  .pdf-container {
+    background: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .pdf-container iframe {
+    width: 100%;
+    height: 900px;
+    border: none;
+  }
+
+  @media (max-width: 1200px) {
+    .resume-layout {
+      flex-direction: column;
+    }
+
+    .pdf-column {
+      flex: none;
+      width: 100%;
+      min-width: 0;
+    }
+
+    .pdf-sticky {
+      position: relative;
+      top: 0;
+    }
+
+    .pdf-container iframe {
+      height: 600px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .exp-header {
+      flex-direction: column;
+    }
+
+    .pdf-container iframe {
+      height: 500px;
+    }
+
+    .skills-columns {
+      grid-template-columns: 1fr;
+    }
+
+    .resume-page {
+      padding: 1rem;
+    }
+
+    .resume-layout {
+      gap: 1rem;
+    }
+  }
+</style>

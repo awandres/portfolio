@@ -1,0 +1,324 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Contact | Alex Wandres"
+  description="Get in touch with Alex Wandres."
+>
+  <div class="container-div">
+    <h1 class="contact-header">Contact</h1>
+
+    <div class="contact-content">
+      <div class="contact-section">
+        <h2><span class="code-accent">&gt;</span> Email</h2>
+        <a href="mailto:alex.r.wandres@gmail.com" class="contact-link">
+          alex.r.wandres@gmail.com
+        </a>
+      </div>
+
+      <div class="contact-section">
+        <h2><span class="code-accent">&gt;</span> Find Me Online</h2>
+        <div class="social-links">
+          <a href="https://github.com/awandres" target="_blank" rel="noopener">
+            <img
+              src="/images/lightgithub62.png"
+              alt="GitHub"
+              class="social-icon"
+            />
+          </a>
+          <a href="https://gitlab.com/awandres" target="_blank" rel="noopener">
+            <img
+              src="/images/gitlab-logo-white-stacked-rgb.png"
+              alt="GitLab"
+              class="social-icon"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/alex-wandres"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="/images/linked66.png"
+              alt="LinkedIn"
+              class="social-icon"
+            />
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-section form-section">
+        <h2><span class="code-accent">&gt;</span> Send a Message</h2>
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          class="contact-form"
+          id="contact-form"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="ce3f16d4-1922-44ef-ba51-37c1a61dc18b"
+          />
+          <input
+            type="hidden"
+            name="subject"
+            value="New contact from portfolio site"
+          />
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">name<span class="code-accent">:</span></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="// your name"
+                autocomplete="name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">email<span class="code-accent">:</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="// your@email.com"
+                autocomplete="email"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message"
+              >message<span class="code-accent">:</span></label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              placeholder="// what do you have in mind?"></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <span class="code-accent">$</span> submit<span class="blink">_</span
+            >
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .container-div {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  .contact-header {
+    font-family: "Titillium Web", sans-serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 900;
+    color: #4dffc3;
+    margin-bottom: 3rem;
+  }
+
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contact-section h2 {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .code-accent {
+    color: #4dffc3;
+  }
+
+  /* Contact Form Styles */
+  .form-section {
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: left;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.95rem;
+    color: #cccccc;
+    letter-spacing: 0.5px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    background: #3a3a3a;
+    border: 1px solid #4dffc3;
+    border-radius: 4px;
+    padding: 0.85rem 1rem;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.95rem;
+    color: #ffffff;
+    transition: all 0.2s ease;
+    resize: vertical;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: #666666;
+    font-style: italic;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #4dffc3;
+    box-shadow: 0 0 0 2px rgba(77, 255, 195, 0.2);
+    background: #404040;
+  }
+
+  .submit-btn {
+    background: transparent;
+    border: 2px solid #4dffc3;
+    border-radius: 4px;
+    padding: 0.85rem 1.5rem;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1rem;
+    color: #4dffc3;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 0.5rem;
+  }
+
+  .submit-btn:hover {
+    background: #4dffc3;
+    color: #1a1a1a;
+  }
+
+  .blink {
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+    0%,
+    50% {
+      opacity: 1;
+    }
+    51%,
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .form-note {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.8rem !important;
+    color: #666666 !important;
+    margin-top: 0.5rem;
+  }
+
+  .contact-link {
+    font-size: 1.25rem;
+    color: var(--accent);
+    transition: opacity 0.3s ease;
+  }
+
+  .contact-link:hover {
+    opacity: 0.7;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .social-icon {
+    width: 62px;
+    height: 62px;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+  }
+
+  .social-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+
+  @media (max-width: 600px) {
+    .container-div {
+      padding: 2rem 1rem;
+    }
+
+    .contact-header {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .social-links {
+      gap: 1.5rem;
+    }
+
+    .social-icon {
+      width: 50px;
+      height: 50px;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      padding: 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    .submit-btn {
+      padding: 0.75rem 1.25rem;
+    }
+  }
+</style>

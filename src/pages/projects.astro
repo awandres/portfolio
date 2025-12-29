@@ -1,0 +1,725 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+// Type for project stack
+type ProjectStack = Record<string, string[]>;
+
+interface Project {
+  id: string;
+  title: string;
+  description: string;
+  stack: ProjectStack;
+  category: string;
+  badge: string;
+  gradient: string;
+  image?: string;
+  github?: string;
+  live?: string;
+}
+
+// Define all projects
+const projects: Project[] = [
+  // AI-Assisted Development
+  {
+    id: "arcprocure",
+    title: "Arc Procure",
+    description:
+      "Custom government software built for the National Institutes of Health (NIH) to streamline the contract proposal and approval process. Developed using AI-assisted programming with Claude Code, including a multi-phase development roadmap and admin dashboard for a team of 10 to track contract validation tasks. Delivered functionality in weeks that would traditionally take months with a full team.",
+    stack: {
+      "Dev Tools": ["Claude Code", "Linear", "Agile"],
+      Backend: ["Full Stack"],
+      Security: ["Public Trust Clearance"],
+    },
+    category: "ai",
+    badge: "Current Role - 2025",
+    gradient: "linear-gradient(135deg, #1a365d 0%, #2c5282 100%)",
+    live: "https://www.aframesolutions.com/",
+    image: "/images/arc-procure-demo-example.png",
+  },
+  {
+    id: "soundsgood",
+    title: "SoundsGood Software",
+    description:
+      "An app development hub that creates and ships app templates for a range of business verticals. Full-stack monorepo platform serving as a CMS hub with shared packages and multi-tenant support for managing multiple client applications. Built using AI-assisted development with Claude and Cursor, featuring modern architecture with Turborepo, authentication, and modern tooling. Use demo login to test different business types and templates.",
+    stack: {
+      Frontend: ["Next.js 15", "TypeScript"],
+      Backend: ["Drizzle ORM"],
+      Database: ["PostgreSQL"],
+      DevOps: ["Turborepo"],
+    },
+    category: "ai",
+    badge: "In Development - 2024",
+    gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    live: "https://www.soundsgoodapps.com/login",
+    image: "/images/soundsgood-apps-demo.png",
+  },
+  {
+    id: "gearcatalog",
+    title: "Gear Catalog",
+    description:
+      "DEMO PROJECT: A comprehensive audio/studio equipment management system featuring gear browsing, project-based loadouts, image management via Vercel Blob, and admin CRUD operations. Built entirely through AI-assisted development with Claude, deployed on Vercel with PostgreSQL. To explore full functionality, click 'Admin Access' and enter password 'tester123'.",
+    stack: {
+      Frontend: ["Next.js 16", "React 19"],
+      Backend: ["Prisma"],
+      Database: ["PostgreSQL"],
+      Cloud: ["Vercel Blob"],
+    },
+    category: "ai",
+    badge: "Live - 2024",
+    gradient: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
+    github: "https://github.com/awandres/gear-catalogue",
+    live: "https://gear-catalogue.vercel.app/gear",
+    image: "/images/gear-catalogue-demo.png",
+  },
+  // Government Software
+  {
+    id: "fedoil",
+    title: "Federal Oil Reserve",
+    description:
+      "Developed and modernized government website for bidding on Federal oil reserves for the Department of Energy. Built Angular dashboard with interactive widgets displaying oil inventory, pipeline flows, and crude imports. Connected to NOAA API for hurricane monitoring. Implemented Login.Gov OAuth 2.0 authentication and assisted Azure Cloud migration.",
+    stack: {
+      Frontend: ["Blazor", "Angular"],
+      Backend: [".NET"],
+      Database: ["SQL Server"],
+      Cloud: ["Azure Cloud"],
+      Auth: ["Login.Gov"],
+    },
+    category: "government",
+    badge: "DOE - 2024-2025",
+    gradient: "linear-gradient(135deg, #2d3748 0%, #4a5568 100%)",
+    image: "/images/original_doe_logo.png",
+  },
+  // Professional & Freelance
+  {
+    id: "ihire",
+    title: "iHire",
+    description:
+      "I worked for iHire for over a year and a half, helping build out their job board platform with new features and pages to help employers and job-seekers connect in useful ways. I was part of a task force to completely overhaul the design of the website over a 6 months period. I also worked in the backend, adding new tables and columns to the vast SQL database to be used on-site.",
+    stack: {
+      Frontend: ["Angular", "VueJS", "HTML/CSS"],
+      Backend: ["C#", "Razor"],
+    },
+    category: "professional",
+    badge: "Full-Time Role",
+    gradient: "linear-gradient(135deg, #00c6ff 0%, #0072ff 100%)",
+    image: "/images/ihire-website-image.png",
+    live: "https://www.ihire.com",
+  },
+  {
+    id: "alexcoomerlaw",
+    title: "Alex Coomer Law",
+    description:
+      "I designed and developed a website for a bankruptcy law firm to help with client acquisition and to act as a resource for legal information. I developed it with ReactJS for speed and functionality to best navigate the information, including FAQs about bankruptcy.",
+    stack: {
+      Frontend: ["React"],
+      Backend: ["Express"],
+    },
+    category: "professional",
+    badge: "Client Project",
+    gradient: "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)",
+    image: "/images/alexcoomerlaw.png",
+    github: "https://github.com/awandres/alexcoomerlaw",
+    live: "https://awandres.github.io/alexcoomerlaw/#/",
+  },
+  {
+    id: "milestones",
+    title: "The Milestones",
+    description:
+      "Full band website featuring Spotify and YouTube embeds, photo galleries, show listings, and Web3Forms contact integration. Custom responsive design with smooth animations and social media integration. This is my band's official website!",
+    stack: {
+      Frontend: ["HTML5", "SCSS"],
+      Libraries: ["Bootstrap 5", "jQuery"],
+      Tools: ["Web3Forms"],
+    },
+    category: "professional",
+    badge: "Live Site",
+    gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+    image: "/images/the-milestones-website-image.png",
+    live: "https://themilestones.band",
+  },
+  {
+    id: "vetted",
+    title: "Vetted Trainers",
+    description:
+      "My client was a fitness trainer who was looking to optimize his site for SEO and Google Ads so he could gain more virtual clientele during quarantine. I developed and designed a new site for him using ReactJS for the speed of a SPA and NextJS for SSR so Google could crawl the page.",
+    stack: {
+      Frontend: ["React", "NextJS"],
+    },
+    category: "professional",
+    badge: "Client Project",
+    gradient: "linear-gradient(135deg, #f7971e 0%, #ffd200 100%)",
+    image: "/images/vetted.png",
+    github: "https://github.com/awandres/vetted-trainers",
+  },
+  {
+    id: "centennial",
+    title: "Centennial",
+    description:
+      "Centennial is a micro-site to celebrate IAAPA's 100th year anniversary. Features include a timeline 'carousel', photo gallery, contact form, and admin portal where verified users can approve or edit the form submissions to be included on the site. Completely designed and developed by myself per a freelance contract with IAAPA.",
+    stack: {
+      Frontend: ["AngularJS"],
+      Backend: ["Express", "Node.js"],
+      Database: ["MongoDB"],
+    },
+    category: "professional",
+    badge: "Freelance Contract",
+    gradient: "linear-gradient(135deg, #8E2DE2 0%, #4A00E0 100%)",
+    image: "/images/centennial.png",
+    github: "https://github.com/awandres/centennial",
+  },
+  // Earlier Work
+  {
+    id: "lunayoga",
+    title: "Luna Yoga",
+    description:
+      "I designed and developed a Wordpress site for a newly opened local yoga studio. I created their design pallette, logo, and the layout and content of their services. I created the site with Wordpress, using ACF and some theme customization. I integrated Mind Body Online to handle all class scheduling.",
+    stack: {
+      CMS: ["Wordpress"],
+      Backend: ["PHP"],
+    },
+    category: "earlier",
+    badge: "Client Site",
+    gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
+    image: "/images/luna-yoga.png",
+  },
+  {
+    id: "marquee",
+    title: "Marquee",
+    description:
+      "Marquee is a concert sharing app that streamlines coordinating attendance to concerts and events among groups of friends. Users can search the Ticketmaster API for upcoming concerts, form groups with other users, and create shared lists where member can vote on which concerts to attend.",
+    stack: {
+      Frontend: ["AngularJS"],
+      Backend: ["Express", "Node.js"],
+      Database: ["MongoDB"],
+    },
+    category: "earlier",
+    badge: "Bootcamp Project",
+    gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
+    image: "/images/marquee.png",
+    github: "https://github.com/awandres/marquee",
+  },
+  {
+    id: "bigbamboo",
+    title: "Big Bamboo",
+    description:
+      "I completely designed and developed a business website for a bed and breakfast resort in Costa Rica with a focus on rebranding. I developed a color scheme and new logo, as well as organized the content of the site for a more concise user experience. I used Wordpress so the client could edit and update the site.",
+    stack: {
+      CMS: ["Wordpress"],
+    },
+    category: "earlier",
+    badge: "Client Site",
+    gradient: "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)",
+    image: "/images/bigbamboo_ss.png",
+    live: "http://www.bigbamboouvita.com/",
+  },
+  {
+    id: "debellis",
+    title: "Debellis + Ferrara",
+    description:
+      "I developed fully responsive landing page ads for a variety of clients with unique business needs and marketing goals. Ads focus on a specific target demographic. For any campaign, there may be as many as three different ads, with different content and formatting, to cater to a particular user.",
+    stack: {
+      Frontend: ["HTML", "CSS", "Bootstrap", "JavaScript"],
+    },
+    category: "earlier",
+    badge: "Agency Work",
+    gradient: "linear-gradient(135deg, #ff6b6b 0%, #feca57 100%)",
+    image: "/images/debellis-ad.png",
+  },
+];
+
+const categories = [
+  { id: "ai", label: "AI-Assisted Development", icon: "🤖", desc: "Built using Claude Code, Cursor, and modern AI workflows — delivering in weeks what traditionally takes months." },
+  { id: "government", label: "Government Software", icon: "🏛️", desc: "Secure, compliant applications for federal agencies. Public Trust security clearance." },
+  { id: "professional", label: "Professional & Freelance", icon: "💼", desc: "Client projects, full-time roles, and freelance contracts." },
+  { id: "earlier", label: "Earlier Work", icon: "📚", desc: "Bootcamp projects and early freelance work." },
+];
+---
+
+<Layout
+  title="Projects | Alex Wandres"
+  description="Portfolio of web development projects."
+>
+  <div class="page-wrapper">
+    <header class="page-header">
+      <h1>Projects</h1>
+      <p class="note">
+        *please note - some of these sites I no longer maintain and are run by
+        the client.
+      </p>
+    </header>
+
+    <!-- Projects by Category -->
+    <div class="projects-sections">
+      {
+        categories.map((category) => {
+          const categoryProjects = projects.filter(
+            (p) => p.category === category.id
+          );
+          
+          return (
+            <section class="category-section" data-category={category.id}>
+              <div class="category-header">
+                <div class="category-header-content">
+                  <h2>
+                    <span class="category-icon">{category.icon}</span>
+                    {category.label}
+                  </h2>
+                  <p class="category-desc">{category.desc}</p>
+                </div>
+                <a href="#" class="back-to-top">↑ top</a>
+              </div>
+              
+              <div class="category-projects">
+                {categoryProjects.map((project) => (
+                  <div class="content-div">
+            <div class="inner-div">
+              <div class="content-text">
+                <h3
+                  class={`content-heads ${project.title.length > 20 ? "long-head" : ""}`}
+                >
+                  {project.title}
+                </h3>
+                <div class="p-div">
+                  <p class="projects-text">{project.description}</p>
+                </div>
+              </div>
+              <div class="content-visual">
+                {project.image ? (
+                  <div>
+                    {project.live ? (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          class="shadow-img project-img"
+                          src={project.image}
+                          alt={project.title}
+                        />
+                      </a>
+                    ) : (
+                      <img
+                        class="shadow-img project-img"
+                        src={project.image}
+                        alt={project.title}
+                      />
+                    )}
+                    {(project.github || project.live) && (
+                      <div class="project-links">
+                        {project.github && (
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="repo-link"
+                          >
+                            GitHub Repo
+                          </a>
+                        )}
+                        {project.live && (
+                          <a
+                            href={project.live}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="repo-link"
+                          >
+                            Visit Site
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <div>
+                    <div
+                      class="project-placeholder"
+                      style={`background: ${project.gradient}`}
+                    >
+                      <span class="badge">{project.badge}</span>
+                    </div>
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="repo-link"
+                      >
+                        GitHub Repo
+                      </a>
+                    )}
+                  </div>
+                )}
+              </div>
+            </div>
+
+            <!-- Tech Stack (categorized like homepage) -->
+            <div class="tech-stack-section">
+              <p class="stack-label">Tech Stack</p>
+              <div class="stack-grid">
+                {Object.entries(project.stack).map(([category, techs]) => (
+                  <div class="stack-category">
+                    <span class="category-name">{category}:</span>
+                    <div class="tech-tags">
+                      {techs.map((tech) => (
+                        <span class="tech-tag">{tech}</span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+                ))}
+              </div>
+            </section>
+          );
+        })
+      }
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .page-wrapper {
+    width: 100%;
+    padding-bottom: 60px;
+  }
+
+  .page-header {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 1400px;
+    padding: 0 2rem;
+  }
+
+  .page-header h1 {
+    font-family: "Titillium Web", sans-serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 900;
+    color: #4dffc3;
+    margin-bottom: 1rem;
+  }
+
+  .note {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 2rem;
+  }
+
+  /* Category Sections */
+  .projects-sections {
+    width: 100%;
+  }
+
+  .category-section {
+    margin-bottom: 4rem;
+  }
+
+  .category-header {
+    width: 100%;
+    background: var(--bg-primary);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 2rem 0 1.5rem;
+    border-bottom: 2px solid var(--accent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .category-header-content {
+    flex: 1;
+    padding: 0 2rem;
+  }
+
+  .back-to-top {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.85rem;
+    color: var(--accent);
+    padding: 0.5rem 1rem;
+    margin-right: 2rem;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .back-to-top:hover {
+    background: var(--accent);
+    color: #1a1a1a !important;
+  }
+
+  .category-header h2 {
+    font-family: "Titillium Web", sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+    color: #4dffc3;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .category-icon {
+    font-size: 1.2em;
+  }
+
+  .category-desc {
+    font-size: 1.1rem !important;
+    color: #aaa !important;
+    margin: 0 !important;
+  }
+
+  .category-projects {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* Project Cards */
+  .content-div {
+    text-align: left;
+    width: 100%;
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+  }
+
+  .content-div:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .inner-div {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .content-text {
+    flex: 1;
+  }
+
+  .content-visual {
+    flex-shrink: 0;
+  }
+
+  .content-heads {
+    font-family: "Titillium Web", sans-serif;
+    color: #4dffc3;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 900;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+  }
+
+  .long-head {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+  }
+
+  .p-div {
+    margin-top: 1rem;
+    border-left: 4px solid var(--accent);
+    padding-left: 1.5rem;
+  }
+
+  .projects-text {
+    font-size: 1.1rem !important;
+    line-height: 1.7;
+    color: var(--text-secondary) !important;
+  }
+
+  /* Project Images */
+  .project-placeholder {
+    width: 450px;
+    height: 280px;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .badge {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 600;
+  }
+
+  .shadow-img {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+  }
+
+  .project-img {
+    width: 450px;
+    height: auto;
+    max-height: 280px;
+    object-fit: cover;
+  }
+
+  .project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.75rem;
+  }
+
+  .repo-link {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 0.95rem;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: all 0.2s ease;
+  }
+
+  .repo-link:hover {
+    color: var(--accent-hover);
+  }
+
+  /* Tech Stack Section */
+  .tech-stack-section {
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+  }
+
+  .stack-label {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1.1rem !important;
+    font-weight: 700;
+    color: var(--accent) !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .stack-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .stack-category {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .category-name {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    min-width: fit-content;
+  }
+
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .tech-tag {
+    background: var(--accent-dim);
+    color: var(--accent);
+    padding: 0.35rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 500;
+  }
+
+  /* Responsive */
+  @media (max-width: 1200px) {
+    .project-placeholder,
+    .project-img {
+      width: 380px;
+      height: 240px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .category-projects {
+      padding: 2rem 1rem 0;
+    }
+
+    .category-header {
+      padding: 1.5rem 0 1rem;
+    }
+
+    .category-header-content {
+      padding: 0 1rem;
+    }
+
+    .back-to-top {
+      margin-right: 1rem;
+      font-size: 0.75rem;
+      padding: 0.4rem 0.75rem;
+    }
+
+    .inner-div {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .project-placeholder,
+    .project-img {
+      width: 100%;
+      height: auto;
+      max-height: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .page-header {
+      padding: 0 1rem;
+    }
+
+    .page-header h1 {
+      font-size: 2.5rem;
+    }
+
+    .category-header h2 {
+      font-size: 1.8rem;
+    }
+
+    .category-desc {
+      font-size: 0.95rem !important;
+    }
+
+    .content-div {
+      padding: 1.5rem;
+    }
+
+    .projects-text {
+      font-size: 1rem !important;
+    }
+
+    .stack-grid {
+      gap: 0.5rem;
+    }
+
+    .tech-tag {
+      font-size: 0.85rem;
+      padding: 0.3rem 0.6rem;
+    }
+  }
+</style>
