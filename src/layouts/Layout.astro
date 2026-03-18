@@ -33,8 +33,11 @@ const currentPath = Astro.url.pathname;
       <div class="nav-inner">
         <a
           href={`${base}/`}
-          class:list={["nav-link", "hvr-fade", { active: currentPath === `${base}/` || currentPath === "/" }]}
-          >About Me</a
+          class:list={[
+            "nav-link",
+            "hvr-fade",
+            { active: currentPath === `${base}/` || currentPath === "/" },
+          ]}>About Me</a
         >
         <a
           href={`${base}/projects`}
@@ -43,7 +46,10 @@ const currentPath = Astro.url.pathname;
             "hvr-fade",
             {
               active:
-                currentPath === `${base}/projects` || currentPath === `${base}/projects/` || currentPath === "/projects" || currentPath === "/projects/",
+                currentPath === `${base}/projects` ||
+                currentPath === `${base}/projects/` ||
+                currentPath === "/projects" ||
+                currentPath === "/projects/",
             },
           ]}>Projects</a
         >
@@ -52,7 +58,13 @@ const currentPath = Astro.url.pathname;
           class:list={[
             "nav-link",
             "hvr-fade",
-            { active: currentPath === `${base}/resume` || currentPath === `${base}/resume/` || currentPath === "/resume" || currentPath === "/resume/" },
+            {
+              active:
+                currentPath === `${base}/resume` ||
+                currentPath === `${base}/resume/` ||
+                currentPath === "/resume" ||
+                currentPath === "/resume/",
+            },
           ]}>Resume</a
         >
         <a
@@ -61,7 +73,11 @@ const currentPath = Astro.url.pathname;
             "nav-link",
             "hvr-fade",
             {
-              active: currentPath === `${base}/contact` || currentPath === `${base}/contact/` || currentPath === "/contact" || currentPath === "/contact/",
+              active:
+                currentPath === `${base}/contact` ||
+                currentPath === `${base}/contact/` ||
+                currentPath === "/contact" ||
+                currentPath === "/contact/",
             },
           ]}>Contact</a
         >

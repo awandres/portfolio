@@ -9,6 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.16.5"
+    "@iconify-json/lucide": "^1.2.98",
+    "astro": "^5.16.5",
+    "astro-icon": "^1.1.5"
   }
 }

@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 
 const base = import.meta.env.BASE_URL;
+const SHOW_AI_CONTENT = false; // Set to true to show AI-related content
 
 // Type for project stack
 type ProjectStack = Record<string, string[]>;
@@ -17,73 +18,63 @@ interface Project {
   image?: string;
   github?: string;
   live?: string;
+  liveLabel?: string;
+  demoLinks?: { label: string; url: string }[];
 }
 
 // Define all projects
 const projects: Project[] = [
-  // AI-Assisted Development
+  // Government Software
   {
-    id: "arcprocure",
-    title: "Arc Procure",
+    id: "arcpropose",
+    title: "Arc Propose",
     description:
-      "Custom government software built for the National Institutes of Health (NIH) to streamline the contract proposal and approval process. Developed using AI-assisted programming with Claude Code, including a multi-phase development roadmap and admin dashboard for a team of 10 to track contract validation tasks. Delivered functionality in weeks that would traditionally take months with a full team.",
+      "Custom government procurement software built under contract with A-Frame Solutions. Streamlines contract solicitation and vendor proposal processes with dynamic form builders, CLIN pricing structures with multi-tier options, and comprehensive multi-phase submission workflows. Built for federal contracting teams to efficiently manage the entire solicitation lifecycle.",
     stack: {
-      "Dev Tools": ["Claude Code", "Linear", "Agile"],
-      Backend: ["Full Stack"],
-      Security: ["Public Trust Clearance"],
+      Frontend: ["Angular", "TypeScript"],
+      Backend: ["C#", "ASP.NET"],
+      Database: ["SQL Server"],
+      Cloud: ["Azure"],
     },
-    category: "ai",
+    category: "government",
     badge: "Current Role - 2025",
     gradient: "linear-gradient(135deg, #1a365d 0%, #2c5282 100%)",
     live: "https://www.aframesolutions.com/",
-    image: `${base}/images/arc-procure-demo-example.png`,
+    liveLabel: "Company Site",
+    demoLinks: [
+      { label: "DEMO - Vendor", url: "https://www.arcpropose.com/" },
+      { label: "DEMO - Buyer", url: "https://buyer.arcpropose.com/" },
+    ],
+    image: `${base}/images/arc-propose-clins.png`,
   },
   {
-    id: "soundsgood",
-    title: "SoundsGood Software",
+    id: "arcinsight",
+    title: "Arc Insight",
     description:
-      "An app development hub that creates and ships app templates for a range of business verticals. Full-stack monorepo platform serving as a CMS hub with shared packages and multi-tenant support for managing multiple client applications. Built using AI-assisted development with Claude and Cursor, featuring modern architecture with Turborepo, authentication, and modern tooling. Use demo login to test different business types and templates.",
+      "AI-powered document analysis and editor built under contract with A-Frame Solutions for the IRS. Leverages machine learning and document intelligence to parse, categorize, and extract key information from complex government documents. Features automated field extraction, intelligent document routing, and streamlined review workflows for tax processing teams.",
     stack: {
-      Frontend: ["Next.js 15", "TypeScript"],
-      Backend: ["Drizzle ORM"],
-      Database: ["PostgreSQL"],
-      DevOps: ["Turborepo"],
+      Frontend: ["Angular", "TypeScript"],
+      Backend: ["C#", "ASP.NET"],
+      Cloud: ["Azure"],
+      AI: ["Document Intelligence"],
     },
-    category: "ai",
-    badge: "In Development - 2024",
-    gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-    live: "https://www.soundsgoodapps.com/login",
-    image: `${base}/images/soundsgood-apps-demo.png`,
+    category: "government",
+    badge: "IRS - 2025",
+    gradient: "linear-gradient(135deg, #2d5016 0%, #4a7c23 100%)",
+    live: "https://www.aframesolutions.com/",
+    liveLabel: "Company Site",
+    image: `${base}/images/arc-select-editor.png`,
   },
-  {
-    id: "gearcatalog",
-    title: "Gear Catalog",
-    description:
-      "DEMO PROJECT: A comprehensive audio/studio equipment management system featuring gear browsing, project-based loadouts, image management via Vercel Blob, and admin CRUD operations. Built entirely through AI-assisted development with Claude, deployed on Vercel with PostgreSQL. To explore full functionality, click 'Admin Access' and enter password 'tester123'.",
-    stack: {
-      Frontend: ["Next.js 16", "React 19"],
-      Backend: ["Prisma"],
-      Database: ["PostgreSQL"],
-      Cloud: ["Vercel Blob"],
-    },
-    category: "ai",
-    badge: "Live - 2024",
-    gradient: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
-    github: "https://github.com/awandres/gear-catalogue",
-    live: "https://gear-catalogue.vercel.app/gear",
-    image: `${base}/images/gear-catalogue-demo.png`,
-  },
-  // Government Software
   {
     id: "fedoil",
     title: "Federal Oil Reserve",
     description:
-      "Developed and modernized government website for bidding on Federal oil reserves for the Department of Energy. Built Angular dashboard with interactive widgets displaying oil inventory, pipeline flows, and crude imports. Connected to NOAA API for hurricane monitoring. Implemented Login.Gov OAuth 2.0 authentication and assisted Azure Cloud migration.",
+      "Developed and modernized government website for bidding on Federal oil reserves for the Department of Energy. Built Angular dashboard with interactive widgets displaying oil inventory, pipeline flows, and crude imports. Connected to NOAA API for hurricane monitoring. Implemented Login.Gov OAuth 2.0 authentication and assisted Azure Cloud migration. Note: This system is hosted on secure government cloud infrastructure and is not publicly accessible.",
     stack: {
       Frontend: ["Blazor", "Angular"],
       Backend: [".NET"],
       Database: ["SQL Server"],
-      Cloud: ["Azure Cloud"],
+      Cloud: ["Azure Gov"],
       Auth: ["Login.Gov"],
     },
     category: "government",
@@ -92,6 +83,23 @@ const projects: Project[] = [
     image: `${base}/images/original_doe_logo.png`,
   },
   // Professional & Freelance
+  {
+    id: "vettedcrm",
+    title: "Personal Trainer CRM",
+    description:
+      "Full-stack CRM platform with dedicated features for client management, team coordination, and admin dashboards. Includes KPI tracking, prescription builder, session scheduling, and payroll integration. Built with real client data (scrambled for demo) and created a management system around his existing business data.",
+    stack: {
+      Frontend: ["Next.js", "React", "TypeScript"],
+      Backend: ["tRPC", "Prisma"],
+      Database: ["PostgreSQL"],
+      Cloud: ["Vercel"],
+    },
+    category: "professional",
+    badge: "Live - 2024",
+    gradient: "linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)",
+    live: "https://vetted-trainers-app-admin.vercel.app/login",
+    image: `${base}/images/vetted-crm-dashboard.png`,
+  },
   {
     id: "ihire",
     title: "iHire",
@@ -106,6 +114,58 @@ const projects: Project[] = [
     gradient: "linear-gradient(135deg, #00c6ff 0%, #0072ff 100%)",
     image: `${base}/images/ihire-website-image.png`,
     live: "https://www.ihire.com",
+  },
+  {
+    id: "dealeron",
+    title: "DealerOn",
+    description:
+      "Designed and managed automotive dealer websites on a multi-tenant CMS platform (Cosmos) serving thousands of dealerships nationwide. Created responsive templates, managed OEM data feeds for vehicle inventory, and designed featured vehicle pages for new model launches. Worked with dealership clients to customize their web presence while maintaining platform consistency.",
+    stack: {
+      Frontend: ["Angular", "JavaScript", "HTML/CSS"],
+      Backend: ["C#", "ASP.NET"],
+      CMS: ["Multi-Tenant Platform"],
+    },
+    category: "professional",
+    badge: "Full-Time Role",
+    gradient: "linear-gradient(135deg, #ff6b35 0%, #f7931e 100%)",
+    image: `${base}/images/dealeron-cosmos.png`,
+    live: "https://www.darcarstoyotaoffrederick.com/",
+    liveLabel: "Example Site",
+  },
+  {
+    id: "soundsgood",
+    title: "SoundsGood Software",
+    description:
+      "An app development hub that creates and ships app templates for a range of business verticals. Full-stack monorepo platform serving as a CMS hub with shared packages and multi-tenant support for managing multiple client applications. Features modern architecture with Turborepo, authentication, and modern tooling. Use demo login to test different business types and templates.",
+    stack: {
+      Frontend: ["Next.js 15", "TypeScript"],
+      Backend: ["Drizzle ORM"],
+      Database: ["PostgreSQL"],
+      DevOps: ["Turborepo"],
+    },
+    category: "professional",
+    badge: "Live - 2024",
+    gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    live: "https://www.soundsgoodapps.com/login",
+    image: `${base}/images/soundsgood-apps-demo.png`,
+  },
+  {
+    id: "gearcatalog",
+    title: "Gear Catalog",
+    description:
+      "DEMO PROJECT: A comprehensive audio/studio equipment management system featuring gear browsing, project-based loadouts, image management via Vercel Blob, and admin CRUD operations. Deployed on Vercel with PostgreSQL. To explore full functionality, click 'Admin Access' and enter password 'tester123'.",
+    stack: {
+      Frontend: ["Next.js", "React"],
+      Backend: ["Prisma"],
+      Database: ["PostgreSQL"],
+      Cloud: ["Vercel Blob"],
+    },
+    category: "professional",
+    badge: "Demo - 2024",
+    gradient: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
+    github: "https://github.com/awandres/gear-catalogue",
+    live: "https://gear-catalogue.vercel.app/gear",
+    image: `${base}/images/gear-catalogue-demo.png`,
   },
   {
     id: "alexcoomerlaw",
@@ -230,10 +290,9 @@ const projects: Project[] = [
 ];
 
 const categories = [
-  { id: "ai", label: "AI-Assisted Development", icon: "🤖", desc: "Built using Claude Code, Cursor, and modern AI workflows — delivering in weeks what traditionally takes months." },
-  { id: "government", label: "Government Software", icon: "🏛️", desc: "Secure, compliant applications for federal agencies. Public Trust security clearance." },
-  { id: "professional", label: "Professional & Freelance", icon: "💼", desc: "Client projects, full-time roles, and freelance contracts." },
-  { id: "earlier", label: "Earlier Work", icon: "📚", desc: "Bootcamp projects and early freelance work." },
+  { id: "government", label: "Government Software", icon: "building", desc: "Secure, compliant applications for federal agencies. Public Trust security clearance." },
+  { id: "professional", label: "Professional & Freelance", icon: "briefcase", desc: "Client projects, full-time roles, and freelance contracts." },
+  { id: "earlier", label: "Earlier Work", icon: "archive", desc: "Bootcamp projects and early freelance work." },
 ];
 ---
 
@@ -263,7 +322,17 @@ const categories = [
               <div class="category-header">
                 <div class="category-header-content">
                   <h2>
-                    <span class="category-icon">{category.icon}</span>
+                    <span class="category-icon">
+                      {category.icon === "building" && (
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/><path d="M9 9h.01"/><path d="M15 9h.01"/><path d="M9 13h.01"/><path d="M15 13h.01"/></svg>
+                      )}
+                      {category.icon === "briefcase" && (
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                      )}
+                      {category.icon === "archive" && (
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="5" x="2" y="3" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><path d="M10 12h4"/></svg>
+                      )}
+                    </span>
                     {category.label}
                   </h2>
                   <p class="category-desc">{category.desc}</p>
@@ -307,7 +376,7 @@ const categories = [
                         alt={project.title}
                       />
                     )}
-                    {(project.github || project.live) && (
+                    {(project.github || project.live || project.demoLinks) && (
                       <div class="project-links">
                         {project.github && (
                           <a
@@ -326,10 +395,23 @@ const categories = [
                             rel="noopener noreferrer"
                             class="repo-link"
                           >
-                            Visit Site
+                            {project.liveLabel || "Live Site"}
                           </a>
                         )}
+                        {project.demoLinks && project.demoLinks.map((demo) => (
+                          <a
+                            href={demo.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="repo-link demo-link"
+                          >
+                            {demo.label}
+                          </a>
+                        ))}
                       </div>
+                    )}
+                    {project.demoLinks && (
+                      <p class="demo-note">* Click DEV MODE at bottom of demo sites to enable logins</p>
                     )}
                   </div>
                 ) : (
@@ -465,7 +547,16 @@ const categories = [
   }
 
   .category-icon {
-    font-size: 1.2em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+  }
+
+  .category-icon svg {
+    color: var(--accent);
+    stroke: var(--accent);
+    vertical-align: middle;
   }
 
   .category-desc {
@@ -594,6 +685,21 @@ const categories = [
 
   .repo-link:hover {
     color: var(--accent-hover);
+  }
+
+  .demo-link {
+    color: var(--accent);
+  }
+
+  .demo-note {
+    font-size: 0.7rem;
+    color: #777;
+    font-style: italic;
+    margin-top: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    border-left: 2px solid var(--accent);
   }
 
   /* Tech Stack Section */
