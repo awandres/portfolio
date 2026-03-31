@@ -6,7 +6,7 @@ const base = import.meta.env.BASE_URL;
 
 // Configuration flags
 const SHOW_AI_CONTENT = false; // Set to true to show AI-related badges, filters, and descriptions
-const DEFAULT_FEATURED_PROJECT = "arcpropose"; // Project ID to show as default featured
+const DEFAULT_FEATURED_PROJECT = "arcprocure"; // Project ID to show as default featured
 
 // Type for project stack
 type ProjectStack = Record<string, string[]>;
@@ -31,8 +31,8 @@ interface Project {
 // Define projects with their categorized technology stacks
 const allProjects: Project[] = [
   {
-    id: "arcpropose",
-    title: "Arc Propose",
+    id: "arcprocure",
+    title: "Arc Procure",
     description:
       "Custom government procurement software built under contract with A-Frame Solutions. Streamlines contract solicitation and vendor proposal processes with dynamic form builders, CLIN pricing structures, and multi-phase submission workflows.",
     stack: {
@@ -46,8 +46,8 @@ const allProjects: Project[] = [
     live: "https://www.aframesolutions.com/",
     liveLabel: "Company Site",
     demoLinks: [
-      { label: "DEMO - Vendor", url: "https://www.arcpropose.com/" },
-      { label: "DEMO - Buyer", url: "https://buyer.arcpropose.com/" },
+      { label: "DEMO - Vendor", url: "https://www.arcprocure.com/" },
+      { label: "DEMO - Buyer", url: "https://buyer.arcprocure.com/" },
     ],
     images: [
       `${base}/images/arc-propose-clins.png`,
@@ -1041,7 +1041,7 @@ const getStackTechs = (stack: ProjectStack) => {
 
     // Set default featured project based on config
     const config = (window as any).PORTFOLIO_CONFIG || {};
-    const defaultProjectId = config.defaultFeaturedProject || "arcpropose";
+    const defaultProjectId = config.defaultFeaturedProject || "arcprocure";
     const defaultCard = Array.from(projectCards).find((card) => {
       return (card as HTMLElement).dataset.id === defaultProjectId;
     });
